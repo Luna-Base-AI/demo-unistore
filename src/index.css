@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #4338ca;
+  --accent-color: #eab308;
+  --background-color: #ffffff;
+  --text-color: #1f2937;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+@layer components {
+  .text-primary {
+    @apply text-[var(--primary-color)];
+  }
+
+  .bg-primary {
+    @apply bg-[var(--primary-color)];
+  }
+}
+
+@layer utilities {
+  .datepicker-wrapper .react-datepicker-wrapper {
+    @apply w-full;
+  }
+
+  .react-datepicker__input-container input {
+    @apply w-full px-4 py-2.5 rounded-lg border border-gray-300;
+  }
+
+  .react-datepicker__input-container input:focus {
+    @apply outline-none ring-2 ring-offset-2 ring-indigo-500;
+  }
+}
